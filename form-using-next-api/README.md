@@ -26,7 +26,7 @@ This route is accessible on the same port as the frontend app, and the way to ac
 
 It's time to start coding the logic for `/form`. As repetitive as it can get while coding anything in Next, start by default exporting a function, which acts as the handler for all request on the `/form` route. Note, similar to how vanilla Node.js handles requests, any request on `/form` route irrespective of the HTTP method (GET, POST etc) will be sent to this handler. Let's take a look how the handler looks:
 
-```{javascript}
+```JavaScript
 export default async function handler(req, res) {
   
 }
@@ -43,7 +43,7 @@ By default (using the default config) following helpers are available:
 
 Default config can be changed as below:
 
-```{javascript}
+```JavaScript
 export const config = {
   api: {
     bodyParser: false,
@@ -61,7 +61,7 @@ Lastly, I'll leave you with a small example on how to  handle form-data in Next 
 
 ### Find the GitHub Repository: [here](https://github.com/divinenaman/explore-nextjs/tree/main/form-using-next-api)
 
-```{javascript}
+```JavaScript
 import formidable from "formidable";
 import * as yup from "yup";
 
@@ -135,7 +135,7 @@ To parse the form-data in request body, I have used Formidable package which is 
 
 Next, sending a request to the API from a page:
 
-```{javascript}
+```JavaScript
 async function submitForm(data) {
     const f = new FormData();
 
